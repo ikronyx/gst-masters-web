@@ -154,3 +154,85 @@ a:hover {
   max-width: 520px;
   color: #e6f0ef; /* primary highlight */
 }
+
+#specialization-carousel {
+  width: 100%;
+}
+
+/* Slides */
+#specialization-carousel .carousel-item {
+  height: 55vh;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Softer overlay */
+#specialization-carousel .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(28, 42, 58, 0.45), rgba(28, 42, 58, 0.65));
+}
+
+/* Caption container */
+#specialization-carousel .carousel-caption {
+  position: absolute;
+  top: 75%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+/* Headings */
+#specialization-carousel h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #d7b999; /* softer gold */
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+#specialization-carousel p {
+  color: #e2e6e9;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 14px auto 0;
+  line-height: 1.6;
+}
+
+/* Ultra smooth fade */
+.carousel-fade .carousel-item {
+  transition: opacity 2s ease-in-out;
+}
+
+/* Subtle text fade-in */
+.carousel-item.active h2,
+.carousel-item.active p {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #specialization-carousel .carousel-item {
+    height: 60vh;
+  }
+
+  #specialization-carousel h2 {
+    font-size: 2rem;
+  }
+
+  #specialization-carousel p {
+    font-size: 0.95rem;
+  }
+}
